@@ -1,3 +1,17 @@
+.grid-block, .main, .post, .comments li, .comment-form {
+    background: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
 body {
     background: #eee;
     color: #666666;
@@ -9,6 +23,10 @@ body {
 
 /* line 32, ../sass/style.scss */
 .navbar .navbar-inner {
+    -webkit-border-radius: 0px 0px 3px 3px;
+    -moz-border-radius: 0px 0px 3px 3px;
+    -ms-border-radius: 0px 0px 3px 3px;
+    -o-border-radius: 0px 0px 3px 3px;
     border-radius: 0px 0px 3px 3px;
 }
 
@@ -45,7 +63,8 @@ body {
 }
 
 .post.animate {
-    -webkit-transition: all 300ms 0ms ease-in;
+    -webkit-transition: all 300ms 0ms;
+    -webkit-transition-delay: ease-in;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in;
@@ -123,6 +142,10 @@ body {
 
 .load-more {
     display: block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     border-radius: 3px;
     background: rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -184,10 +207,10 @@ body {
     position: fixed;
     z-index: 10000;
     padding: 10px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     pointer-events: none;
 }
 
