@@ -1,21 +1,4 @@
-if (Posts.find().count() === 0) {
-    Posts.insert({
-        title: 'Introducing Telescope',
-        url: 'http://sachagreif.com/introducing-telescope/'
-    });
-
-    Posts.insert({
-        title: 'Meteor',
-        url: 'http://meteor.com'
-    });
-
-    Posts.insert({
-        title: 'The Meteor Book',
-        url: 'http://themeteorbook.com'
-    });
-}
-
-// Fixture data
+// Fixture data 
 if (Posts.find().count() === 0) {
     var now = new Date().getTime();
 
@@ -34,14 +17,14 @@ if (Posts.find().count() === 0) {
         userId: sacha._id,
         author: sacha.profile.name,
         url: 'http://sachagreif.com/introducing-telescope/',
-        submitted: now - 7 * 3600 * 1000
+        submitted: new Date(now - 7 * 3600 * 1000)
     });
 
     Comments.insert({
         postId: telescopeId,
         userId: tom._id,
         author: tom.profile.name,
-        submitted: now - 5 * 3600 * 1000,
+        submitted: new Date(now - 5 * 3600 * 1000),
         body: 'Interesting project Sacha, can I get involved?'
     });
 
@@ -49,7 +32,7 @@ if (Posts.find().count() === 0) {
         postId: telescopeId,
         userId: sacha._id,
         author: sacha.profile.name,
-        submitted: now - 3 * 3600 * 1000,
+        submitted: new Date(now - 3 * 3600 * 1000),
         body: 'You sure can Tom!'
     });
 
@@ -58,7 +41,7 @@ if (Posts.find().count() === 0) {
         userId: tom._id,
         author: tom.profile.name,
         url: 'http://meteor.com',
-        submitted: now - 10 * 3600 * 1000
+        submitted: new Date(now - 10 * 3600 * 1000)
     });
 
     Posts.insert({
@@ -66,6 +49,6 @@ if (Posts.find().count() === 0) {
         userId: tom._id,
         author: tom.profile.name,
         url: 'http://themeteorbook.com',
-        submitted: now - 12 * 3600 * 1000
+        submitted: new Date(now - 12 * 3600 * 1000)
     });
 }
