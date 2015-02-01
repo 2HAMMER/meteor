@@ -13,3 +13,4 @@ accounts-password
 audit-argument-checks
 standard-app-packages
 underscore
+multiply:iron-router-progress

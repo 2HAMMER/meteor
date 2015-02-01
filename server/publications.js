@@ -1,12 +1,17 @@
-Meteor.publish('posts', function () {
-    return Posts.find();
+Meteor.publish('posts', function (options) {
+    return Posts.find({}, options);
 });
 
-Meteor.publish('comments', function(postId) {
+Meteor.publish('singlePost', function(id) {
+    check(id, String);
+    return id && Posts.find(id);
+});
+
+Meteor.publish('comments', function (postId) {
     check(postId, String);
     return Comments.find({postId: postId});
 });
 
 Meteor.publish('notifications', function () {
-    return Notifications.find();
+    return Notifications.find({userId: this.userId, read: false});
 });
