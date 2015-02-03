@@ -14,3 +14,5 @@ audit-argument-checks
 standard-app-packages
 underscore
 multiply:iron-router-progress
+meteorhacks:kadira
+meteorhacks:zones
